@@ -1,0 +1,106 @@
+@media (min-width:1024px){
+@mixin size-img($h, $w){
+    height: $h;
+    width: $w;
+}    
+    body{
+        background-image: url(../img/ladrillos.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /*Inicio*/
+
+    header{
+        display: flex;
+        justify-content: space-around;
+        img{
+            height: 200px;
+            width: 200px;
+            margin-bottom: 20px;
+        }
+    }
+
+
+    footer{
+        border: 0ch;
+        font-size: 15px;
+    }
+    .titulo, .sueño, .info, .idea, .simple{
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .data{
+        font-style: italic;
+    }
+
+    /*Comidas y bebidas*/
+    
+    .galeria{        
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;        
+    }
+    .pizzas, .hamburguesas, .carnes, .snacks, .tablas, .cervezas, .cocteles, .vinos{
+        @include size-img(300px, 260px);        
+    }
+    .size:hover{
+        transform: scale(1.5);
+        transition-duration: 1.5s;
+    }
+    .pizzas, .carnes, .snacks, .tablas, .cervezas, .cocteles, .vinos{
+        @extend .size;
+    }
+    
+    /*Contacto*/
+    
+    .header{
+        grid-area: header;
+    }
+    .section{
+        grid-area: section;
+    }
+    .footer{
+        grid-area: footer;
+    }
+    
+    .grilla{
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "section section"
+        "footer footer";
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 20px;
+        grid-row-gap: 20px;
+    }
+    
+    .section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h2{
+        font-size: 40px;        
+        border: 5px dotted wheat;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    .icon{
+        margin-left: 100px;
+    }
+        
+    h1{
+        font-size: 50px;
+    }
+
+    .cv, .email{
+        font-size: x-large;        
+    }
+
+}
