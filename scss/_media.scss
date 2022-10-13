@@ -20,8 +20,7 @@
             margin-bottom: 20px;
         }
     }
-
-
+    
     footer{
         border: 0ch;
         font-size: 15px;
@@ -48,6 +47,16 @@
     .pizzas, .hamburguesas, .carnes, .snacks, .tablas, .cervezas, .cocteles, .vinos{
         @include size-img(300px, 260px);        
     }
+
+    .hamburguesas:hover{
+        transform: scale(1.5) translateX(100px);
+        transition: 1.5s;
+    }
+    .carnes:hover{
+        transform: scale(1.5) translateX(-100px);
+        transition: 1.5s;
+    }
+
     .size:hover{
         transform: scale(1.5);
         transition-duration: 1.5s;
