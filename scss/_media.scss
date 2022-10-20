@@ -1,3 +1,60 @@
+@media (min-width:767px){
+/* Inicio */ 
+    header {
+        img{
+        margin-left: 270px;
+        height: 200px;
+        width: 200px;
+        }
+    }
+    .data{
+        font-style:italic ;
+    }
+
+    nav{       
+        text-align: center;
+        letter-spacing: 5px;    
+        a{
+            text-decoration: none;
+            list-style-type: none;    
+            font-size: 22px;
+        }            
+    }
+
+/* Seccion comidas */    
+    .pizzas, .hamburguesas, .carnes, .snacks, .tablas, .cervezas, .cocteles, .vinos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 460px;
+        width: 400px;
+        margin: 20px;
+    }
+
+/* Seccion Contacto */
+    h2{
+        font-size: 30px;
+    }
+
+    .redes{        
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+/* Seccion trabajo */
+    .cv, .email{
+        font-size: 30px;
+        padding: 10px;
+    }
+
+/* Footer */
+    footer{
+        font-size: 20px;
+    }
+
+}
+
 @media (min-width:1024px){
 @mixin size-img($h, $w){
     height: $h;
@@ -18,6 +75,7 @@
             height: 200px;
             width: 200px;
             margin-bottom: 20px;
+            margin-left: 10px;
         }
     }
     
@@ -40,32 +98,35 @@
     
     .galeria{        
         display: flex;
+        flex-direction: row;
         justify-content: center;
-        align-content: center;
-        align-items: center;        
+        align-content: center;        
     }
     .pizzas, .hamburguesas, .carnes, .snacks, .tablas, .cervezas, .cocteles, .vinos{
-        @include size-img(300px, 260px);        
+        @include size-img(300px, 240px);
+        margin: 10px;        
     }
 
     .hamburguesas:hover{
         transform: scale(1.5) translateX(100px);
-        transition: 1.5s;
+        transition-duration: 2s;
     }
+
     .carnes:hover{
-        transform: scale(1.5) translateX(-100px);
-        transition: 1.5s;
+        transform: scale(1.5) translatex(-100px);
+        transition-duration: 2s;
     }
 
     .size:hover{
         transform: scale(1.5);
         transition-duration: 1.5s;
     }
-    .pizzas, .carnes, .snacks, .tablas, .cervezas, .cocteles, .vinos{
+    .pizzas, .snacks, .tablas, .cervezas, .cocteles, .vinos{
         @extend .size;
     }
     
     /*Contacto*/
+    
     
     .header{
         grid-area: header;
@@ -101,7 +162,7 @@
         padding: 20px;
     }
     .icon{
-        margin-left: 100px;
+        margin: 30px;
     }
         
     h1{
